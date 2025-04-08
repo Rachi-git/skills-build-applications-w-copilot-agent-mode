@@ -8,7 +8,7 @@ from django.urls import path
 
 @api_view(['GET'])
 def api_root(request, format=None):
-    base_url = request.build_absolute_uri('/')
+    base_url = "https://redesigned-spork-g6pj46rr9hpp6xNAME-8000.app.github.dev/"
     return Response({
         'users': base_url + 'api/users/',
         'teams': base_url + 'api/teams/',
@@ -39,6 +39,9 @@ class LeaderboardViewSet(viewsets.ModelViewSet):
 class WorkoutViewSet(viewsets.ModelViewSet):
     queryset = Workout.objects.all()
     serializer_class = WorkoutSerializer
+
+# Ensure urlpatterns is defined before appending to it
+urlpatterns = []  # Initialize urlpatterns if not already defined
 
 urlpatterns += [
     path('codespace-suffix/', codespace_suffix, name='codespace_suffix'),
