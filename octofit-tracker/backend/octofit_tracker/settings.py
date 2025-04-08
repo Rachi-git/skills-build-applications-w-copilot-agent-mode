@@ -26,7 +26,8 @@ SECRET_KEY = "django-insecure-vtfmv6&e^kbt3s4!r@zc=hkokx0g^)(331$qy_p=a_e!#u!=!n
 DEBUG = True
 
 # Allow all hosts
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.app.github.dev', '0.0.0.0']
+ALLOWED_HOSTS.append('redesigned-spork-g6pj46rr9hpp6x-8000.app.github.dev')
 
 
 # Application definition
